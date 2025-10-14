@@ -77,16 +77,16 @@ It can be configured with command line arguments (see [Command Line Options](REA
 For example, to run `BAxUS` for 1,000 function evaluations on a Branin2 function with input dimensionality 100 for one
 repetition run (for installation from source)
 
-```python
-python3
-benchmark_runner.py - id
-100 - td
-1 - n
-10 - r
-1 - m
-1000 - f
-branin2 - a
-baxus - -adjust - initial - target - dimension
+```bash
+python3 benchmark_runner.py \
+  -id 100 \
+  -td 1 \
+  -n 10 \
+  -r 1 \
+  -m 1000 \
+  -f branin2 \
+  -a baxus \
+  --adjust-initia-target-dimension
 ```
 
 or, for PyPi installations,
