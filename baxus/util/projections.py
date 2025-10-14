@@ -68,7 +68,7 @@ class AxUS(ProjectionModel):
                 input_dim_permutation = np.random.permutation(list(range(self.input_dim)))
 
                 input_dim_bins = np.array_split(input_dim_permutation + 1, self.target_dim)
-                input_dim_bins = right_pad_sequence(input_dim_bins, dtype=np.int)
+                input_dim_bins = right_pad_sequence(input_dim_bins, dtype=np.int32)
 
                 mtrx = np.zeros((self.target_dim, self.input_dim + 1))
                 np.put_along_axis(arr=mtrx, indices=input_dim_bins,
@@ -189,7 +189,7 @@ class AxUS(ProjectionModel):
             new_bins = np.array_split(contributing_input_dims + 1, n_new_bins)[1:]
             elements_to_move = np.array_split(non_zero_elements, n_new_bins)[1:]
 
-            new_bins_padded = right_pad_sequence(new_bins, dtype=np.int)
+            new_bins_padded = right_pad_sequence(new_bins, dtype=np.int32)
             elements_to_move_padded = right_pad_sequence(elements_to_move)
 
             S_stack = np.zeros((n_new_bins - 1, self.S.shape[1] + 1))
