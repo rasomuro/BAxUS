@@ -86,7 +86,7 @@ python3 benchmark_runner.py \
   -m 1000 \
   -f branin2 \
   -a baxus \
-  --adjust-initia-target-dimension
+  --adjust-initial-target-dimension
 ```
 
 or, for PyPi installations,
