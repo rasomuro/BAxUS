@@ -6,3 +6,6 @@
 /.vscode/
 /.idea/
 __pycache__
+/data/
+!/data/rotation_matrix_alebo.json
+!/data/rotation_matrix_alebo.npy
